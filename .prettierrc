@@ -1,9 +1,9 @@
 {
-    "semi": false,
-    "singleQuote": true,
-    "singleAttributePerLine": true,
-    "bracketSameLine": true,
-    "endOfLine": "lf",
-    "trailingComma": "none",
-    "arrowParens": "avoid"
-  }
+  "semi": false,
+  "singleQuote": true,
+  "singleAttributePerLine": true,
+  "bracketSameLine": true,
+  "endOfLine": "lf",
+  "trailingComma": "none",
+  "arrowParens": "avoid"
+}
