@@ -10,8 +10,6 @@ const MainLayout = () => {
   );
 };
 
-export default MainLayout;
-
 const Container = styled.div`
   display: flex;
   flex-direction: row;
@@ -23,3 +21,5 @@ const ContentContainer = styled.div`
   flex-direction: column;
   background-color: ${({ theme }) => theme.colors.neutral[0]};
 `;
+
+export default MainLayout;

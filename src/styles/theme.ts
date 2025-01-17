@@ -1,3 +1,11 @@
+const hexToRgba = (hex: string, alpha: number): string => {
+  const bigint = parseInt(hex.slice(1), 16);
+  const r = (bigint >> 16) & 255;
+  const g = (bigint >> 8) & 255;
+  const b = bigint & 255;
+  return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+};
+
 const theme: Theme = {
   colors: {
     neutral: {
@@ -12,16 +20,20 @@ const theme: Theme = {
       900: '#000000'
     },
     blue: {
-      100: '#436BFD'
+      100: '#436BFD',
+      10: hexToRgba('#436BFD', 0.1)
     },
     orange: {
-      100: '#FF6625'
+      100: '#FF6625',
+      10: hexToRgba('#FF6625', 0.1)
     },
     yellow: {
-      100: '#FFD53B'
+      100: '#FFD53B',
+      10: hexToRgba('#FFD53B', 0.1)
     },
     green: {
-      100: '#26CA7B'
+      100: '#26CA7B',
+      10: hexToRgba('#26CA7B', 0.1)
     }
   }
 };
@@ -40,6 +52,7 @@ type NeutralShades = {
 
 type ColorShades = {
   100: string;
+  10: string;
 };
 
 type Theme = {
