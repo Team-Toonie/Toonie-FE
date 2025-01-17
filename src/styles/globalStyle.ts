@@ -18,7 +18,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     display: flex;
     font-family: 'Pretendard';
-    background-color: pink;
+    letter-spacing: -0.03em;
   }
 
   button {
