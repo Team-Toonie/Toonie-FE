@@ -70,7 +70,7 @@ const Container = styled.div`
   padding: 20px;
   gap: 52px;
   height: 100vh;
-  border-right: 1px solid ${({ theme }) => theme.colors.neutral[200]};
+  border-right: 1px solid ${({ theme }) => theme.colors.neutral[300]};
 `;
 
 const Logo = styled.img`

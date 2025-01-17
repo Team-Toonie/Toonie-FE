@@ -9,6 +9,7 @@ const hexToRgba = (hex: string, alpha: number): string => {
 const theme: Theme = {
   colors: {
     neutral: {
+      0: '#FFFFFF',
       100: '#FAFAFA',
       200: '#F7F7F7',
       300: '#EEEEEE',
@@ -39,6 +40,7 @@ const theme: Theme = {
 };
 
 type NeutralShades = {
+  0: string;
   100: string;
   200: string;
   300: string;
