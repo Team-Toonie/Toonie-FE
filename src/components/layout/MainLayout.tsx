@@ -20,7 +20,6 @@ const Container = styled.div`
   flex-direction: row;
   width: 100vw;
   background-color: ${({ theme }) => theme.colors.neutral[700]};
-  /* overflow: hidden; */
   width: 100vw;
   height: 100vh;
 `;
@@ -30,7 +29,6 @@ const ContentContainer = styled.div`
   flex-direction: row;
   flex-grow: 1;
   background-color: ${({ theme }) => theme.colors.neutral[0]};
-  /* overflow-x: auto; */
   justify-content: center;
   overflow-y: auto;
   height: 100%;
@@ -41,7 +39,6 @@ const ContentWrapper = styled.div`
   flex-direction: column;
   background-color: salmon;
   width: 100%;
-  max-width: 1000px;
 `;
 
 export default MainLayout;
