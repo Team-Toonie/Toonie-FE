@@ -73,6 +73,7 @@ const Container = styled.div`
   gap: 32px;
   height: 100vh;
   border-right: 1px solid ${({ theme }) => theme.colors.neutral[300]};
+  z-index: 20;
 `;
 
 const Logo = styled.img`

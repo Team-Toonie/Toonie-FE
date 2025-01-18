@@ -5,18 +5,21 @@ import MyStoreItem from '../../components/features/mystore/MyStoreItem';
 import useStickyHeader from '../../hooks/useStickyHeader';
 
 const MyStore = () => {
-  const contentRef = useRef<HTMLDivElement>(null);
-  const defaultHeaderRef = useRef<HTMLDivElement>(null);
-  const isStickyHeaderVisible = useStickyHeader(contentRef, defaultHeaderRef);
+  // const contentRef = useRef<HTMLDivElement>(null);
+  // const defaultHeaderRef = useRef<HTMLDivElement>(null);
+  // const isStickyHeaderVisible = useStickyHeader(contentRef, defaultHeaderRef);
 
   return (
     <Container>
-      <StickyHeader isVisible={isStickyHeaderVisible}></StickyHeader>
-      <ContentContainer ref={contentRef}>
-        <DefaultHeader ref={defaultHeaderRef}>
-          <HeaderTitle>내 가게 관리</HeaderTitle>
-          <RegisterButton>새 가게 등록</RegisterButton>
-        </DefaultHeader>
+      <ContentContainer>
+        <MyStoreItem></MyStoreItem>
+        <MyStoreItem></MyStoreItem>
+        <MyStoreItem></MyStoreItem>
+        <MyStoreItem></MyStoreItem>
+        <MyStoreItem></MyStoreItem>
+        <MyStoreItem></MyStoreItem>
+        <MyStoreItem></MyStoreItem>
+        <MyStoreItem></MyStoreItem>
         <MyStoreItem></MyStoreItem>
         <MyStoreItem></MyStoreItem>
         <MyStoreItem></MyStoreItem>
@@ -31,9 +34,9 @@ const MyStore = () => {
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  background-color: ${({ theme }) => theme.colors.neutral[0]};
   height: 100vh;
   position: relative;
+  background-color: ${({ theme }) => theme.colors.neutral[0]};
 `;
 
 const ContentContainer = styled.div`
@@ -42,7 +45,6 @@ const ContentContainer = styled.div`
   padding: 20px 60px;
   gap: 20px;
   background-color: wihte;
-  overflow-y: auto;
 `;
 
 const DefaultHeader = styled.div`
