@@ -41,7 +41,7 @@ const ContentContainer = styled.div`
   flex-direction: column;
   padding: 20px 60px;
   gap: 20px;
-  background-color: lemonchiffon;
+  background-color: wihte;
   overflow-y: auto;
 `;
 
@@ -49,12 +49,9 @@ const DefaultHeader = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  background-color: pink;
+  background-color: white;
   align-items: center;
-  padding: 20px;
-  transition:
-    box-shadow 0.3s ease,
-    padding 0.3s ease;
+  padding: 20px 0px;
 `;
 
 const HeaderTitle = styled.div`
