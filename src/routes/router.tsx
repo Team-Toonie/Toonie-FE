@@ -9,7 +9,7 @@ import MyStore from '../pages/mystore/MyStore';
 import Rental from '../pages/rental/Rental';
 import Store from '../pages/store/Store';
 import MyPage from '../pages/mypage/MyPage';
-import MainLayout from '../components/MainLayout';
+import MainLayout from '../components/layout/MainLayout';
 
 const router = createBrowserRouter([
   {

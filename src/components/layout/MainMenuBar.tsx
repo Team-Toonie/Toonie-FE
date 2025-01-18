@@ -1,23 +1,23 @@
 import styled from 'styled-components';
 import { Link, useLocation } from 'react-router-dom';
-import logo from '../assets/toonie-logo.svg';
-import { getUserRole } from '../utils/getUserRole';
-import { USER_ROLE } from '../constants/userRole';
+import logo from '../../assets/toonie-logo.svg';
+import { getUserRole } from '../../utils/getUserRole';
+import { USER_ROLE } from '../../constants/userRole';
 
-import MapIconGrey from '../assets/icons/map-grey.svg';
-import MapIconBlue from '../assets/icons/map-blue.svg';
-import ComicsIconGrey from '../assets/icons/comics-grey.svg';
-import ComicsIconBlue from '../assets/icons/comics-blue.svg';
-import LoginIconGrey from '../assets/icons/login-grey.svg';
-import LoginIconBlue from '../assets/icons/login-blue.svg';
-import CartIconGrey from '../assets/icons/cart-grey.svg';
-import CartIconBlue from '../assets/icons/cart-blue.svg';
-import RentalIconGrey from '../assets/icons/rental-grey.svg';
-import RentalIconBlue from '../assets/icons/rental-blue.svg';
-import MyPageIconGrey from '../assets/icons/mypage-grey.svg';
-import MyPageIconBlue from '../assets/icons/mypage-blue.svg';
-import MyStoreIconGrey from '../assets/icons/mystore-grey.svg';
-import MyStoreIconBlue from '../assets/icons/mystore-blue.svg';
+import MapIconGrey from '../../assets/icons/map-grey.svg';
+import MapIconBlue from '../../assets/icons/map-blue.svg';
+import ComicsIconGrey from '../../assets/icons/comics-grey.svg';
+import ComicsIconBlue from '../../assets/icons/comics-blue.svg';
+import LoginIconGrey from '../../assets/icons/login-grey.svg';
+import LoginIconBlue from '../../assets/icons/login-blue.svg';
+import CartIconGrey from '../../assets/icons/cart-grey.svg';
+import CartIconBlue from '../../assets/icons/cart-blue.svg';
+import RentalIconGrey from '../../assets/icons/rental-grey.svg';
+import RentalIconBlue from '../../assets/icons/rental-blue.svg';
+import MyPageIconGrey from '../../assets/icons/mypage-grey.svg';
+import MyPageIconBlue from '../../assets/icons/mypage-blue.svg';
+import MyStoreIconGrey from '../../assets/icons/mystore-grey.svg';
+import MyStoreIconBlue from '../../assets/icons/mystore-blue.svg';
 
 const MainMenuBar = () => {
   const userRole = getUserRole();
