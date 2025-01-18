@@ -1,39 +1,13 @@
-import { useState, useEffect, useRef } from 'react';
+import { useRef } from 'react';
 import styled from 'styled-components';
 import StickyHeader from '../../components/common/StickyHeader';
 import MyStoreItem from '../../components/features/mystore/MyStoreItem';
+import useStickyHeader from '../../hooks/useStickyHeader';
 
 const MyStore = () => {
-  const [isStickyHeaderVisible, setIsStickyHeaderVisible] = useState(false);
   const contentRef = useRef<HTMLDivElement>(null);
   const defaultHeaderRef = useRef<HTMLDivElement>(null);
-
-  const handleScroll = () => {
-    const contentElement = contentRef.current;
-    const defaultHeaderElement = defaultHeaderRef.current;
-
-    if (contentElement && defaultHeaderElement) {
-      const contentTop = contentElement.getBoundingClientRect().top;
-      const defaultHeaderBottom = defaultHeaderElement?.getBoundingClientRect().bottom;
-
-      console.log('contentTop: ', contentTop);
-      console.log('defaultHeaderBottom: ', defaultHeaderBottom);
-
-      setIsStickyHeaderVisible(contentTop >= defaultHeaderBottom);
-    }
-  };
-
-  useEffect(() => {
-    const contentElement = contentRef.current;
-    if (contentElement) {
-      contentElement.addEventListener('scroll', handleScroll);
-    }
-    return () => {
-      if (contentElement) {
-        contentElement.removeEventListener('scroll', handleScroll);
-      }
-    };
-  }, []);
+  const isStickyHeaderVisible = useStickyHeader(contentRef, defaultHeaderRef);
 
   return (
     <Container>
