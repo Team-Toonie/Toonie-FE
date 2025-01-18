@@ -21,6 +21,8 @@ const Container = styled.div`
   width: 100vw;
   background-color: ${({ theme }) => theme.colors.neutral[700]};
   /* overflow: hidden; */
+  width: 100vw;
+  height: 100vh;
 `;
 
 const ContentContainer = styled.div`
@@ -30,6 +32,8 @@ const ContentContainer = styled.div`
   background-color: ${({ theme }) => theme.colors.neutral[0]};
   /* overflow-x: auto; */
   justify-content: center;
+  overflow-y: auto;
+  height: 100%;
 `;
 
 const ContentWrapper = styled.div`

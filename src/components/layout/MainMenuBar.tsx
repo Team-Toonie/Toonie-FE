@@ -25,19 +25,21 @@ const MainMenuBar = () => {
   return (
     <Container>
       <Logo src={logo} />
-      <NavBar>
-        {menuItems[userRole]?.map(item => {
-          const isActive = location.pathname === item.path;
-          const icon = isActive ? item.icons.blue : item.icons.grey;
+      <NavContainer>
+        <NavBar>
+          {menuItems[userRole]?.map(item => {
+            const isActive = location.pathname === item.path;
+            const icon = isActive ? item.icons.blue : item.icons.grey;
 
-          return (
-            <NavItem to={item.path} isActive={isActive}>
-              <Icon src={icon} />
-              {item.name}
-            </NavItem>
-          );
-        })}
-      </NavBar>
+            return (
+              <NavItem to={item.path} isActive={isActive}>
+                <Icon src={icon} />
+                {item.name}
+              </NavItem>
+            );
+          })}
+        </NavBar>
+      </NavContainer>
     </Container>
   );
 };
@@ -68,13 +70,19 @@ const Container = styled.div`
   flex-direction: column;
   background-color: ${({ theme }) => theme.colors.neutral[100]};
   padding: 20px;
-  gap: 52px;
+  gap: 32px;
   height: 100vh;
   border-right: 1px solid ${({ theme }) => theme.colors.neutral[300]};
 `;
 
 const Logo = styled.img`
   width: 180px;
+`;
+
+const NavContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
 `;
 
 const NavBar = styled.div`
