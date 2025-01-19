@@ -1,24 +1,21 @@
 import { useRef } from 'react';
 import styled from 'styled-components';
 import MainMenuBar from './MainMenuBar';
-import StickyHeader from '../common/StickyHeader';
-import DefaultHeader from '../common/DefaultHeader';
-import useStickyHeader from '../../hooks/useStickyHeader';
+import RouteHeader from '../common/RouteHeader';
+import useScrollShadow from '../../hooks/useScrollShadow';
 import { Outlet } from 'react-router-dom';
 
 const MainLayout = () => {
   const contentRef = useRef<HTMLDivElement>(null);
-  const defaultHeaderRef = useRef<HTMLDivElement>(null);
-  const isStickyHeaderVisible = useStickyHeader(contentRef, defaultHeaderRef);
+  const hasScrolled = useScrollShadow(contentRef);
 
   return (
     <Container>
       <MainMenuBar />
       <SectionContainer>
-        <StickyHeader isVisible={isStickyHeaderVisible}></StickyHeader>
+        <RouteHeader hasShadow={hasScrolled} />
         <ContentContainer ref={contentRef}>
           <ContentWrapper>
-            <DefaultHeader ref={defaultHeaderRef} title="내 가게 관리 ㅎㅎ" />
             <Outlet />
           </ContentWrapper>
         </ContentContainer>
@@ -39,7 +36,6 @@ const SectionContainer = styled.div`
   display: flex;
   flex-direction: column;
   background-color: ${({ theme }) => theme.colors.neutral[0]};
-  position: relative;
   height: 100%;
   width: 100%;
   overflow-y: auto;

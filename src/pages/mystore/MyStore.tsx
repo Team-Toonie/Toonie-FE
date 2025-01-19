@@ -1,16 +1,10 @@
-import { useRef } from 'react';
 import styled from 'styled-components';
-import StickyHeader from '../../components/common/StickyHeader';
 import MyStoreItem from '../../components/features/mystore/MyStoreItem';
-import useStickyHeader from '../../hooks/useStickyHeader';
 
 const MyStore = () => {
-  // const contentRef = useRef<HTMLDivElement>(null);
-  // const defaultHeaderRef = useRef<HTMLDivElement>(null);
-  // const isStickyHeaderVisible = useStickyHeader(contentRef, defaultHeaderRef);
-
   return (
     <Container>
+      <Header>내 가게 관리</Header>
       <ContentContainer>
         <MyStoreItem></MyStoreItem>
         <MyStoreItem></MyStoreItem>
@@ -47,26 +41,13 @@ const ContentContainer = styled.div`
   background-color: wihte;
 `;
 
-const DefaultHeader = styled.div`
+const Header = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   background-color: white;
   align-items: center;
   padding: 20px 0px;
-`;
-
-const HeaderTitle = styled.div`
-  font-size: 28px;
-  font-weight: 700;
-`;
-
-const RegisterButton = styled.div`
-  background-color: black;
-  color: white;
-  padding: 12px;
-  border-radius: 8px;
-  white-space: nowrap;
 `;
 
 export default MyStore;
