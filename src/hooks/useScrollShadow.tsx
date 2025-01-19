@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
 const useScrollShadow = (contentRef: React.RefObject<HTMLDivElement>) => {
   const [hasScrolled, setHasScrolled] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,6 +26,16 @@ const useScrollShadow = (contentRef: React.RefObject<HTMLDivElement>) => {
       }
     };
   }, [contentRef]);
+
+  // 경로가 변경될 떄 스크롤 상태 초기화
+  useEffect(() => {
+    setHasScrolled(false);
+
+    const contentElement = contentRef.current;
+    if (contentElement) {
+      contentElement.scrollTop = 0;
+    }
+  }, [location.pathname]);
 
   return hasScrolled;
 };
