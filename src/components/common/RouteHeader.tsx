@@ -28,9 +28,9 @@ const Container = styled.div<{ $hasShadow: boolean }>`
 
 const InnerContainer = styled.div`
   display: flex;
-  padding: 12px 60px;
+  padding: 12px 40px;
   width: 100%;
-  max-width: 1400px;
+  /* max-width: 1400px; */
 `;
 
 const Title = styled.div`

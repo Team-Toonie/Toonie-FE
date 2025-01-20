@@ -46,7 +46,7 @@ const ContentContainer = styled.div`
   flex-direction: column;
   width: 100%;
   gap: 20px;
-  background-color: wihte;
+  background-color: white;
   overflow-y: auto;
 `;
 
@@ -55,6 +55,7 @@ const ContentWrapper = styled.div`
   flex-direction: column;
   width: 100%;
   max-width: 1000px;
+  padding-bottom: 20px;
   margin: 0 auto;
 `;
 

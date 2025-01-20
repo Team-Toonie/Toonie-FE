@@ -1,12 +1,17 @@
 import styled from 'styled-components';
 import NextIcon from '../../../assets/icons/next-circle.svg';
 
-const MyStoreItem = () => {
+interface MyStoreItemProps {
+  storeName: string;
+  location: string;
+}
+
+const MyStoreItem: React.FC<MyStoreItemProps> = ({ storeName, location }) => {
   return (
     <Container>
       <InfoContainer>
-        <Title>내 가게 1</Title>
-        <SubTitle>서울시 성북구</SubTitle>
+        <Title>{storeName}</Title>
+        <SubTitle>{location}</SubTitle>
       </InfoContainer>
       <Icon src={NextIcon} />
     </Container>
@@ -16,7 +21,7 @@ const MyStoreItem = () => {
 const Container = styled.div`
   display: flex;
   flex-direction: row;
-  border: 1px solid ${({ theme }) => theme.colors.neutral[500]};
+  border: 1px solid ${({ theme }) => theme.colors.neutral[300]};
   border-radius: 8px;
   padding: 24px;
   justify-content: space-between;
@@ -36,7 +41,7 @@ const Title = styled.div`
 `;
 
 const SubTitle = styled.div`
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 400;
   color: ${({ theme }) => theme.colors.neutral[700]};
 `;
